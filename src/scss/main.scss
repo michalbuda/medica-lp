@@ -1,7 +1,6 @@
 @import "~normalize.css";
-
 @import "_variables";
-@import "modules/hello.scss";
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Raleway:wght@400;700;800&display=swap');
 
 body {
   background: $gray;
@@ -10,4 +9,5 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  font-family: $raleway;
 }
