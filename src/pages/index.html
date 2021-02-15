@@ -1,7 +1,9 @@
-<!DOCTYPE html><html lang="pl"><head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starter</title>
+    <title>Medica</title>
     <meta name="description" content="Your project description">
     <!-- Title -->
     <meta property="og:title" content>
@@ -15,16 +17,175 @@
     <!-- uncomment the line below to enable PWA  -->
     <!-- <link rel="manifest" href="manifest.json" /> -->
 
-  <link rel="apple-touch-icon" href="pwa/apple-icon-180.png">
 
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 
 </head>
   <body>
+    <header class="header">
+      <nav class="navigation">
+        <div class="logo">
+          <img src="../assets/img/logo.svg" alt="Logo Medi.ca">
+        </div>
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="">Products</a></li>
+          <li class="navigation__item"><a href="">About us</a></li>
+          <li class="navigation__item"><a href="">Resume</a></li>
+          <li class="navigation__item"><a href="">Contact us</a></li>
+        </ul>
+      </nav>
+      <img src="../assets/img/nav-wave.svg" alt="">
+    </header>
 
+    <main class="main">
+      <section class="hero">
+        <h1 class="hero__heading heading">We provide the<strong class="paragraph__bold"> best pharmacy</strong> solutions and much more!</h1>
+        <section class="btn-wrapper">
+          <button class="cta">Try now!</button>
+          <button class="cta__secondary">Or learn more</button>
+        </section>
+        <section class="hero__scroll">
+          <a href="">
+            <img src="../assets/icons/scroll-arrow.svg" alt="scroll arrow">
+          </a>
+        </section>
+        <span class="illustraion-wrapper">
+          <img src="../assets/img/hero-illustration.svg" alt="">
+        </span>
+      </section>
+      <section class="products">
+        <h1 class="products__heading heading">Products from the <strong class="paragraph__bold">most trusted</strong> labs in Europe</h1>
+        <article class="products__section">
+          <ul class="products__list">
+            <li class="products__list--item">
+              <img src="../assets/img/products-first-aid-kit.svg" alt="">
+              <h4>First aid kit supplies and more</h4>
+            </li>
+            <li class="products__list--item">
+              <img src="../assets/img/products-pills.svg" alt="">
+              <h4>The most effective medicines</h4>
+            </li>
+            <li class="products__list--item">
+              <img src="../assets/img/products-hospital.svg" alt="">
+              <h4>Supplies for hospitals</h4>
+            </li>
+          </ul>
+        </article>
+        <button class="cta">Check full offer</button>
+      </section>
+      <section class="about">
+        <article class="about__content">
+          <h1 class="about__heading heading">Our <strong class="paragraph__bold">mission</strong></h1>
+          <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor duis tristique quam nulla. Integer gravida eu id eget nisl convallis leo. Vitae et nullam mattis posuere fusce turpis elementum tempus nunc. Nulla magnis odio mauris turpis. Consequat sit facilisis purus tincidunt vitae et elementum.</p>
+        </article>
+        <img src="../assets/img/about-us-illustration.svg" alt="">
+      </section>
+      <section class="testimonials">
+        <h1 class="testimonials__heading heading">We are <strong class="paragraph__bold">reliable</strong></h1>
+        <p class="parahraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum nunc.</p>
+        <section class="testimonials__content">
+          <span class="testimonials__image">
+            <img src="../assets/img/testimonials-author.png" alt="">
+          </span>
+          <article class="testimonials__article">
+            <div class="article-wrapper">
+              <h1 class="testimonials__quote">''</h1>
+              <h4 class="testimonials__article--heading">The best quality assortment and professionalism</h4>
+              <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id elit curabitur augue malesuada eget neque ipsum, sed suspendisse. Tristique a nulla est elementum dui. Viverra viverra.</p>
+              <h4 class="testimonials__author">Alexandria Schofield</h4>
+            </div>
+              <ul class="article-pages">
+                <li><img src="../assets/icons/dot-full.svg" alt=""></li>
+                <li><img src="../assets/icons/dot-empty.svg" alt=""></li>
+                <li><img src="../assets/icons/dot-empty.svg" alt=""></li>
+                <li><img src="../assets/icons/dot-empty.svg" alt=""></li>
+                <li><img src="../assets/icons/dot-empty.svg" alt=""></li>
+                <li><img src="../assets/icons/dot-empty.svg" alt=""></li>
+              </ul>
+              <button class="button__previous"><img src="../assets/icons/arrow-left.svg" alt=""></button>
+              <button class="button__next"><img src="../assets/icons/arrow-right.svg" alt=""></button>
+          </article>
+        </section>
+      </section>
+      <section class="contact">
+        <h1 class="contact__heading">Do you have any questions? Feel free to ask us!</h1>
+        <p class="parahraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi facilisis cras porttitor ut.</p>
+        <section class="contact__content">
+          <img src="../assets/img/contact-illustration.svg" alt="">
+          <div class="contact__form-wraper">
+            <form class="form" method="POST" action="">
+              <p>
+                <label for="name"></label>
+                <input type="text" name="name" id="name" placeholder="Your name" required>
+              </p>
+              <p>
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="Your email address" required>
+              </p>
+              <p>
+                <label for="message">
+                  <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here..." required></textarea>
+                </label>
+              </p>
+              <div class="form__footer">
+                <div class="form__checkbox">Accept the terms and condiditions.</div>
+                <input type="submit" value="Send">
+              </div>
+            </form>
+          </div>
+        </section>
+      </section>
 
+    </main>
 
-
+    <footer class="footer">
+      <div class="logo">
+        <img src="../assets/img/logo.svg" alt="Logo Medi.ca">
+      </div>
+      <section class="footer__content">
+        <section class="footer__items">
+          <ul class="footer__list">
+            <li class="footer__list--item">Products</li>
+            <li class="footer__list--item"><a href="">Vestibulum phasellus eu.</a></li>
+            <li class="footer__list--item"><a href="">Et ut diam aliquam.</a></li>
+            <li class="footer__list--item"><a href="">Pellentesque faucibus.</a></li>
+            <li class="footer__list--item"><a href="">Sit sed nunc at lorem.</a></li>
+          </ul>
+          <ul class="footer__list">
+            <li class="footer__list--item">About us</li>
+            <li class="footer__list--item"><a href="">Sit sed nunc at lorem.</a></li>
+            <li class="footer__list--item"><a href="">Vestibulum phasellus eu.</a></li>
+          </ul>
+          <ul class="footer__list">
+            <li class="footer__list--item">Support</li>
+            <li class="footer__list--item"><a href="">Et ut diam aliquam.</a></li>
+            <li class="footer__list--item"><a href="">Pellentesque faucibus.</a></li>
+            <li class="footer__list--item"><a href="">Sit sed nunc at lorem.</a></li>
+            <li class="footer__list--item"><a href="">Vestibulum phasellus eu.</a></li>
+          </ul>
+          <ul class="footer__list">
+            <li class="footer__list--item">Contact</li>
+            <li class="footer__list--item"><img src="../assets/icons/phone-icon.svg" alt="phone icon">+48 222 353 555</li>
+            <li class="footer__list--item"><img src="../assets/icons/email-icon.svg" alt="at icon">medica@medica.com</li>
+          </ul>
+        </section>
+        <section class="footer__margin">
+          <section class="footer__terms">
+            <p><a href="">Terms</a></p>
+            <p><a href=""></a>Privacy policy</p>
+          </section>
+          <section class="footer__brand">
+            <p class="footer__paragraph">Medica © All rights reserved</p>
+          </section>
+          <section class="footer__socials">
+            <a href=""><img src="../assets/icons/tt-icon.svg" alt=""></a>
+            <a href=""><img src="../assets/icons/fb-icon.svg" alt=""></a>
+            <a href=""><img src="../assets/icons/in-icon.svg" alt=""></a>
+          </section>
+        </section>
+      </section>
+      <img class="footer__waves" src="../assets/img/footer-wave.svg" alt="blue wave background">
+    </footer>
 </body>
 </html>
