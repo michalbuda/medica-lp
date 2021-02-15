@@ -3,11 +3,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Raleway:wght@400;700;800&display=swap');
 
 body {
-  background: $gray;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: $white;
+  color: $text;
   min-height: 100vh;
   font-family: $raleway;
+}
+
+.btn-wrapper{
+  margin: 0 0 104px 0;
+}
+
+.cta{
+  border-style: none;
+  border-radius: 48px;
+  font-size: $h4;
+  font-weight: $bold;
+  padding: 24px 64px;
+  color: $white;
+  background-color: $blue;
+  text-decoration: none;
+  
+  &__secondary{
+    color: $blue;
+    background-color: $white;
+    border: solid 1px $blue;
+    font-size: $li;
+    font-weight: $bold;
+    padding: 27.5px 55px;
+    margin-left: 36px;
+  }
+}
+
+.header{
+  margin: 24px 8% 240px 8%;
+}
+
+.heading{
+  font-size: $h1;
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__heading{
+    text-align: center;
+    margin: 0 0 104px 0;
+  }
+
+  &__illustraion-wrapper{
+    position: absolute;
+    right: 0;
+  }
+  &__illustration{
+    position: relative;
+    // bottom: 50px;
+  }
+}
+
+.main{
+  margin: 24px 8% 256px 8%;
+}
+
+.navigation{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+ &__list{
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+ }
+ &__item{
+  color: $white;
+  list-style: none;
+  margin-left: 48px;
+  font-size: $li;
+  font-weight: $bold;
+  &--link{
+    color: $white;
+    text-decoration: none;
+  }
+ }
+
+
+  &__wave-illustration{
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    right: 0;
+    // width: 80%;
+  }
+
+}
+
+.paragraph{
+
+
+  &__bold{
+    font-weight: $bold;
+    color: $blue;
+  }
 }
