@@ -46,6 +46,22 @@ body {
   }
 }
 
+.footer{
+  &__content{
+    background-color: $green;
+  }
+  &__list{
+    margin: 0;
+  }
+  &__waves{
+    width: -webkit-fill-available;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../assets/img/footer-wave.svg);
+  }
+}
+
 .header{
   margin: 24px 8% 240px 8%;
 }
