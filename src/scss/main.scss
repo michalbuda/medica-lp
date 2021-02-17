@@ -1,6 +1,8 @@
 @import "~normalize.css";
 @import "_variables";
+@import "checkbox.scss";
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Raleway:wght@400;700;800&display=swap');
+
 
 body {
   background: $white;
@@ -14,6 +16,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &__description{
+    max-width: 520px;
+  }
   &__heading{
     margin: 0px 0 64px 0;
   }
@@ -58,6 +63,36 @@ body {
     padding: 27.5px 55px;
     margin-left: 36px;
   }
+  &__form{
+    padding: 12px 32px;
+    font-size: $li;
+  }
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__heading{
+    font-size: $h2;
+    margin: 0 0 32px 0;
+  }
+  &__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 64px 0 0 0;
+    width: -webkit-fill-available;
+  }
+  &__description{
+    max-width: 1000px;
+  }
+  &__form-wrapper{
+    padding: 48px 42px;
+    border: 1px dashed #008372;
+    border-radius: 35px;
+  }
 }
 
 .footer{
@@ -73,6 +108,46 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../assets/img/footer-wave.svg);
+  }
+}
+
+.form{
+  &__footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__input{
+    margin: 0 0 16px 0;
+    &--field{
+      padding: 16px 0 16px 32px;
+      border-radius: 48px;
+      border-style: none;
+      box-shadow: $shadow;
+      min-width: 320px;
+      font-size: $li;
+      font-weight: $bold;
+      color: $green;
+      &::placeholder{
+        color: $green;
+      }
+    }
+    &--textarea{
+      border-radius: 24px;
+      margin-bottom: 52px;
+    }
+  }
+  &__terms{
+    font-size: $h5;
+    font-weight: $bold;
+    color: $text;
+  }
+  &__terms-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 
@@ -146,7 +221,6 @@ body {
 .paragraph{
   font-size: $p;
   font-family: $cabin;
-  max-width: 520px;
   margin: 0;
   &__bold{
     font-weight: $bold;
@@ -289,3 +363,4 @@ body {
     }
   }
 }
+

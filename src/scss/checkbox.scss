@@ -1,0 +1,56 @@
+//reset
+[type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    position: relative;
+    left: 0;
+    opacity: 0.01;
+  }
+  [type="checkbox"]:not(:checked) + .form__terms,
+  [type="checkbox"]:checked + .form__terms {
+    position: relative;
+    padding-left: 24px;
+    font-size: $h5;
+    line-height: 1.7;
+    cursor: pointer;
+  }
+
+//checkbox empty
+  [type="checkbox"]:not(:checked) + .form__terms:before,
+  [type="checkbox"]:checked + .form__terms:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid $green;
+    background: $white;
+    border-radius: 16px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0, .1), 0 0 0 rgba(203, 34, 237, .2);
+    -webkit-transition: all .275s;
+        transition: all .275s;
+  }
+
+//checkbox checked
+[type="checkbox"]:not(:checked) + .form__terms:after,
+[type="checkbox"]:checked + .form__terms:after {
+  content: url(../assets/icons/checked.svg);
+  position: absolute;
+  left: 0;
+  color: $text;
+  line-height: 2.3;
+  -webkit-transition: all .2s;
+      transition: all .2s;
+}
+
+[type="checkbox"]:not(:checked) + .form__terms:after {
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(45deg);
+      transform: scale(0) rotate(45deg);
+}
+
+[type="checkbox"]:checked + .form__terms:after {
+  opacity: 1;
+  -webkit-transform: scale(1) rotate(0);
+      transform: scale(1) rotate(0);
+}
