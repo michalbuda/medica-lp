@@ -81,6 +81,7 @@ body {
   &__content{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 64px 0 0 0;
     width: -webkit-fill-available;
@@ -96,11 +97,64 @@ body {
 }
 
 .footer{
+
   &__content{
     background-color: $green;
   }
+  &__items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0px 8% 32px 8%;
+  }
+  &__link{
+    text-decoration: none;
+    color: $white;
+  }
   &__list{
-    margin: 0;
+    margin: 0 64px 0 0;
+    padding: 0;
+    list-style: none;
+    &--item{
+      color: $white;
+      font-size: $li;
+      margin-bottom: 16px;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+    }
+    &--title{
+      font-size: $h3;
+      font-weight: $bold;
+      margin-bottom: 24px;
+    }
+  }
+  &__margin{
+    align-items: center;
+    padding: 64px 4% 32px 4%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__paragraph{
+    color: $white;
+    font-size: $li;
+    font-weight: $bold;
+  }
+  &__socials{
+    display: flex;
+    align-items: flex-end;
+    &--link{
+      margin-left: 64px;
+    }
+  }
+  &__terms{
+    color: $white;
+    display: flex;
+    &--link{
+      margin-right: 32px;
+      font-weight: $bold;
+    }
   }
   &__waves{
     width: -webkit-fill-available;
@@ -178,7 +232,13 @@ body {
     // bottom: 50px;
   }
 }
-
+.logo{
+  display: flex;
+  justify-content: center;
+  &__footer{
+    margin-bottom: 80px;
+  }
+}
 .main{
   margin: 24px 8% 256px 8%;
 }
