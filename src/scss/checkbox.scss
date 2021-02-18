@@ -1,7 +1,7 @@
 //reset
 [type="checkbox"]:not(:checked),
   [type="checkbox"]:checked {
-    position: relative;
+    position: absolute;
     left: 0;
     opacity: 0.01;
   }
