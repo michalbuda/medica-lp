@@ -402,6 +402,7 @@ body {
   right: 17px;
   top: 9px;
   z-index: 99999;
+  
   @media (min-width: $medium){
     display: none;
   }
@@ -559,6 +560,7 @@ body {
  }
 
 &__hamburger{
+    opacity: 0;
     display: none;
     width: 100vw;
     height: 100vh;
@@ -568,15 +570,22 @@ body {
     left: 0;
     top: 0;
     z-index: 9999;
+
+    &--animationOut{
+      animation: hamburgerOut .6s cubic-bezier(0.55, 0.46, 0, 1);
+    }
+
     &--link{
       text-decoration: none;
       color: $text;
       transition: .4s cubic-bezier(0.55, 0.46, 0, 1);
       &:hover{
         color: $pink;
+        transform: translateX(16px);
       }
     }
     &--list{
+      transform: translateX(786px);
       list-style: none;
       display: flex;
       flex-direction: column;
@@ -597,10 +606,16 @@ body {
       &:hover{
         transform: translateX(16px);
       }
-      @media (max-width: $medium) {
+      @media (max-width: $mobile) {
         font-size: $h3;
       }
     }
+
+    &--link-animationIn{
+      animation: linkIn 1s cubic-bezier(0.55, 0.46, 0, 1);
+      animation-fill-mode: forwards;
+    }
+
     &--logo{
       position: absolute;
       display: flex;
@@ -608,12 +623,17 @@ body {
       width: -moz-available;
       justify-content: center;
       margin-top: 64px;
+      animation: logo .8s cubic-bezier(0.55, 0.46, 0, 1);
+    }
+
+    
+    &--visible{
+      display: block;
+      opacity: 1;
+      animation: hamburgerBg .6s cubic-bezier(0.55, 0.46, 0, 1);
     }
 }
 
-&__hamburger--visible{
-  display: block;
-}
 
   &__wave-illustration{
     position: absolute;
@@ -830,5 +850,50 @@ body {
     opacity: 1;
     top: -8px;
     // left: 0;
+  }
+}
+
+@keyframes hamburgerBg {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes logo {
+  0%{
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes linkIn {
+  0%{
+    opacity: 0;
+    transform: translateX(0);
+  }
+  // 66%{
+  //   opacity: .3;
+  // }
+  100%{
+    opacity: 1;
+    transform: translateX(-786px);
+  }
+}
+
+@keyframes hamburgerOut {
+  0%{
+    opacity: 1;
+
+  }
+  100%{
+    opacity: 0;
+
   }
 }
