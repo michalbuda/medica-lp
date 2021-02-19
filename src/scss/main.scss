@@ -15,6 +15,16 @@ body {
   font-family: $raleway;
 }
 
+
+
+.locked{
+  overflow: hidden;
+}
+
+.unlocked{
+  overflow: scroll;
+}
+
 .about{
   margin: 0 0 150px 0;
   display: flex;
@@ -395,6 +405,7 @@ body {
   position: absolute;
   right: 17px;
   top: 9px;
+  z-index: 99999;
   @media (min-width: $medium){
     display: none;
   }
@@ -543,6 +554,39 @@ body {
   }
  }
 
+&__hamburger{
+    display: none;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    &--link{
+      text-decoration: none;
+      color: $text;
+    }
+    &--list{
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+    }
+    &--list-item{
+      color: $green;
+      font-size: $h2;
+      font-weight: $bold;
+      margin: 0 0 32px 8%;
+    }
+}
+
+&__hamburger--visible{
+  display: block;
+}
 
   &__wave-illustration{
     position: absolute;
