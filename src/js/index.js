@@ -8,19 +8,43 @@ import '../scss/main.scss';
 
 console.log('Hi there 👋');
 
-
+const body = document.querySelector(".body");
 const hamburgerOpen = document.querySelector(".hamburger__js");
 const hambNav = document.querySelector(".navigation__hamburger");
 
-const hamburgerItem = document.querySelector('.navigation__hamburger--list-item');
+const products = document.querySelector('.navigation__products');
+const about = document.querySelector('.navigation__about');
+const testimonials = document.querySelector('.navigation__testimonials');
+const contact = document.querySelector('.navigation__contact');
 
-hamburgerOpen.addEventListener('click', (e) => {
+hamburgerOpen.addEventListener('click', () => {
     hamburgerOpen.classList.toggle('is-active');
     hambNav.classList.toggle('navigation__hamburger--visible');
+    body.classList.toggle('locked')
 })
 
-hamburgerItem.addEventListener('click', (e)=>{
-    console.log('xddd')
+products.addEventListener('click', ()=>{
+    hamburgerOpen.classList.toggle('is-active');
+    hambNav.classList.toggle('navigation__hamburger--visible');
+    body.classList.toggle('locked')
+})
+
+about.addEventListener('click', ()=>{
+    hamburgerOpen.classList.toggle('is-active');
+    hambNav.classList.toggle('navigation__hamburger--visible');
+    body.classList.toggle('locked')
+})
+
+testimonials.addEventListener('click', ()=>{
+    hamburgerOpen.classList.toggle('is-active');
+    hambNav.classList.toggle('navigation__hamburger--visible');
+    body.classList.toggle('locked')
+})
+
+contact.addEventListener('click', ()=>{
+    hamburgerOpen.classList.toggle('is-active');
+    hambNav.classList.toggle('navigation__hamburger--visible');
+    body.classList.toggle('locked')
 })
 
 // const body = document.querySelector(".body");
@@ -28,10 +52,7 @@ hamburgerItem.addEventListener('click', (e)=>{
 // const hamburger = document.querySelector('.hamburger');
 // const hamburgerMenu = document.querySelector('.navigation__hamburger');
 
-// const products = document.querySelector('.hamburger__products');
-// const about = document.querySelector('.hamburger__about');
-// const testimonials = document.querySelector('.hamburger__testimonials');
-// const contact = document.querySelector('.hamburger__contact');
+
 
 // hamburger.addEventListener('click', (e) =>{
 //     body.classList.toggle('locked');
