@@ -18,76 +18,78 @@
     <!-- <link rel="manifest" href="manifest.json" /> -->
 
 
-<meta name="apple-mobile-web-app-capable" content="yes">
-
-
 </head>
   <body>
     <header class="header">
       <nav class="navigation">
         <div class="logo">
-          <img src="../assets/img/logo.svg" alt="Logo Medi.ca">
+          <a href="#"><img src="../assets/img/logo.svg" alt="Logo Medica"></a> 
         </div>
+        <button aria-label="hamburger menu" class="hamburger hamburger--collapse">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
         <ul class="navigation__list">
-          <li class="navigation__item"><a class="navigation__item--link" href="">Products</a></li>
-          <li class="navigation__item"><a class="navigation__item--link" href="">About us</a></li>
-          <li class="navigation__item"><a class="navigation__item--link" href="">Resume</a></li>
-          <li class="navigation__item"><a class="navigation__item--link" href="">Contact us</a></li>
+          <li class="navigation__item"><a class="navigation__item--link" href="#products">Products</a></li>
+          <li class="navigation__item"><a class="navigation__item--link" href="#about">About us</a></li>
+          <li class="navigation__item"><a class="navigation__item--link" href="#testimonials">Testimonials</a></li>
+          <li class="navigation__item"><a class="navigation__item--link" href="#contact">Contact us</a></li>
         </ul>
       </nav>
-      <img class="navigation__wave-illustration" src="../assets/img/nav-wave.svg" alt="">
+      <img class="navigation__wave-illustration" src="../assets/img/nav-wave.svg" alt="decorative blob under the navigation list">
     </header>
 
     <main class="main">
       <section class="hero">
         <h1 class="hero__heading heading">We provide the<strong class="paragraph__bold"> best pharmacy</strong> solutions and much more!</h1>
         <section class="btn-wrapper">
-          <a href="" class="cta">Try now!</a>
-          <a href="" class="cta cta__secondary">Or learn more</a>
+          <a href="#" class="cta">Try now!</a>
+          <a href="#" class="cta cta__secondary">Or learn more</a>
         </section>
         <section class="hero__scroll">
-          <a href="">
+          <a href="#products">
             <img src="../assets/icons/scroll-arrow.svg" alt="scroll arrow">
           </a>
         </section>
         <span class="hero__illustraion-wrapper">
-          <img class="hero__illustration" src="../assets/img/hero-illustration.svg" alt="">
-          <img class="hero__illustration--small" src="../assets/img/hero-illustration-small.svg" alt="">
+          <img class="hero__illustration" src="../assets/img/hero-illustration.svg" alt="standing doctor with a notebook in her hand">
+          <img class="hero__illustration--small" src="../assets/img/hero-illustration-small.svg" alt="standing doctor with a notebook in her hand">
         </span>
       </section>
-      <section class="products">
+      <section id="products" class="products">
         <h1 class="products__heading heading">Products from the <strong class="paragraph__bold">most trusted</strong> labs in Europe</h1>
         
           <ul class="products__list">
             <li class="products__list--item">
-              <img src="../assets/img/products-first-aid-kit.svg" alt="">
-              <h4 class="products__list--description products__list--fix">First aid kit supplies and more</h4>
+              <img src="../assets/img/products-first-aid-kit.svg" alt="first aid kit, syringe and patch">
+              <h2 class="products__list--description products__list--fix">First aid kit supplies and more</h2>
             </li>
             <li class="products__list--item">
-              <img style="height: 210px" src="../assets/img/products-pills.svg" alt="">
-              <h4 class="products__list--description">The most effective medicines</h4>
+              <img style="height: 210px" src="../assets/img/products-pills.svg" alt="pill packages">
+              <h2 class="products__list--description">The most effective medicines</h2>
             </li>
             <li class="products__list--item">
-              <img src="../assets/img/products-hospital.svg" alt="">
-              <h4 class="products__list--description">Supplies for hospitals</h4>
+              <img src="../assets/img/products-hospital.svg" alt="hospital">
+              <h2 class="products__list--description">Supplies for hospitals</h2>
             </li>
           </ul>
         
-        <a href="" class="cta">Check full offer</a>
+        <a href="#" class="cta">Check full offer</a>
       </section>
-      <section class="about">
+      <section id="about" class="about">
         <article class="about__content">
           <h1 class="heading about__heading">Our <strong class="paragraph__bold">mission</strong></h1>
           <p class="paragraph about__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor duis tristique quam nulla. Integer gravida eu id eget nisl convallis leo. Vitae et nullam mattis posuere fusce turpis elementum tempus nunc. Nulla magnis odio mauris turpis. Consequat sit facilisis purus tincidunt vitae et elementum.</p>
         </article>
-        <img class="about__illustration" src="../assets/img/about-us-illustration.svg" alt="">
-        <img class="about__illustration--small" src="../assets/img/about-us-illustration-small.svg" alt="">
+        <img class="about__illustration" src="../assets/img/about-us-illustration.svg" alt="mr. and mrs. doctor in front of the city, a heart with a pulse line between them">
+        <img class="about__illustration--small" src="../assets/img/about-us-illustration-small.svg" alt="mr. and mrs. doctor in front of the city, a heart with a pulse line between them">
       </section>
-      <section class="testimonials">
+      <section id="testimonials" class="testimonials">
         <h1 class="testimonials__heading heading">We are <strong class="paragraph__bold">reliable</strong></h1>
         <p class="paragraph testimonials__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum nunc.</p>
         <section class="testimonials__content">
-          <span class="testimonials__image"></span>
+          <span alt="picture of testimonial's author" class="testimonials__image"></span>
           <article class="testimonials__article">
             <div class="testimonials__wrapper">
               <span class="testimonials__quote">
@@ -108,13 +110,13 @@
                   <li class="testimonials__pages--dot"></li>
                 </ul>
                 <div class="testimonials__navigation--buttons">
-                  <button class="btn-reset button button__previous">
+                  <button aria-label="previous testimonial" class="btn-reset button button__previous">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M24 15.9998C24 15.7346 23.8946 15.4802 23.7071 15.2927C23.5196 15.1052 23.2652 14.9998 23 14.9998H11.414L15.708 10.7078C15.8958 10.52 16.0013 10.2654 16.0013 9.9998C16.0013 9.73425 15.8958 9.47957 15.708 9.2918C15.5202 9.10403 15.2656 8.99854 15 8.99854C14.7344 8.99854 14.4798 9.10403 14.292 9.2918L8.292 15.2918C8.19887 15.3847 8.12499 15.495 8.07458 15.6165C8.02416 15.738 7.99821 15.8683 7.99821 15.9998C7.99821 16.1313 8.02416 16.2616 8.07458 16.3831C8.12499 16.5046 8.19887 16.6149 8.292 16.7078L14.292 22.7078C14.4798 22.8956 14.7344 23.0011 15 23.0011C15.2656 23.0011 15.5202 22.8956 15.708 22.7078C15.8958 22.52 16.0013 22.2653 16.0013 21.9998C16.0013 21.7342 15.8958 21.4796 15.708 21.2918L11.414 16.9998H23C23.2652 16.9998 23.5196 16.8944 23.7071 16.7069C23.8946 16.5194 24 16.265 24 15.9998Z" fill="#008372"/>
                     <rect x="-0.5" y="0.5" width="31" height="31" rx="15.5" transform="matrix(-1 0 0 1 31 0)" stroke="#008372"/>
                     </svg>
                   </button>
-                  <button class="btn-reset button button__next">
+                  <button aria-label="next testimonial" class="btn-reset button button__next">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <rect width="32" height="32" rx="16" fill="#008372"/>
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.9998C8 15.7346 8.10536 15.4802 8.29289 15.2927C8.48043 15.1052 8.73478 14.9998 9 14.9998H20.586L16.292 10.7078C16.1042 10.52 15.9987 10.2654 15.9987 9.9998C15.9987 9.73425 16.1042 9.47957 16.292 9.2918C16.4798 9.10403 16.7344 8.99854 17 8.99854C17.2656 8.99854 17.5202 9.10403 17.708 9.2918L23.708 15.2918C23.8011 15.3847 23.875 15.495 23.9254 15.6165C23.9758 15.738 24.0018 15.8683 24.0018 15.9998C24.0018 16.1313 23.9758 16.2616 23.9254 16.3831C23.875 16.5046 23.8011 16.6149 23.708 16.7078L17.708 22.7078C17.5202 22.8956 17.2656 23.0011 17 23.0011C16.7344 23.0011 16.4798 22.8956 16.292 22.7078C16.1042 22.52 15.9987 22.2653 15.9987 21.9998C15.9987 21.7342 16.1042 21.4796 16.292 21.2918L20.586 16.9998H9C8.73478 16.9998 8.48043 16.8944 8.29289 16.7069C8.10536 16.5194 8 16.265 8 15.9998Z" fill="#FEFEFE"/>
@@ -127,21 +129,21 @@
           </article>
         </section>
       </section>
-      <section class="contact">
+      <section id="contact" class="contact">
         <h1 class="contact__heading">Do you have any questions? Feel free to ask us!</h1>
         <p class="paragraph contact__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi facilisis cras porttitor ut.</p>
         <section class="contact__content">
-          <img class="contact__illustration" src="../assets/img/contact-illustration.svg" alt="">
-          <img class="contact__illustration--small" src="../assets/img/contact-illustration-small.svg" alt="">
+          <img class="contact__illustration" src="../assets/img/contact-illustration.svg" alt="mr. and mrs. doctor in front of the city">
+          <img class="contact__illustration--small" src="../assets/img/contact-illustration-small.svg" alt="mr. and mrs. doctor in front of the city">
           <div class="contact__form-wrapper">
             <form class="form" method="POST" action="">
               <p class="form__input">
-                <label for="name"></label>
-                <input class="form__input--field" type="text" name="name" id="name" placeholder="Your name" required>
+                <label for="name">
+                <input class="form__input--field" type="text" name="name" id="name" placeholder="Your name" required></label>
               </p>
               <p class="form__input">
-                <label for="email"></label>
-                <input class="form__input--field" type="email" name="email" id="email" placeholder="Your email address" required>
+                <label for="email">
+                <input class="form__input--field" type="email" name="email" id="email" placeholder="Your email address" required></label>
               </p>
               <p class="form__input">
                 <label for="message">
@@ -164,29 +166,29 @@
 
     <footer class="footer">
       <div class="logo logo__footer">
-        <img src="../assets/img/logo.svg" alt="Logo Medi.ca">
+        <a href="#"><img src="../assets/img/logo.svg" alt="Logo Medica"></a> 
       </div>
       <div class="footer__waves"></div>
       <section class="footer__content">
         <section class="footer__items">
           <ul class="footer__list">
             <li class="footer__list--item footer__list--title">Products</li>
-            <li class="footer__list--item"><a class="footer__link" href="">Vestibulum phasellus eu.</a></li>
-            <li class="footer__list--item"><a class="footer__link" href="">Et ut diam aliquam.</a></li>
-            <li class="footer__list--item"><a class="footer__link" href="">Pellentesque faucibus.</a></li>
-            <li class="footer__list--item"><a class="footer__link" href="">Sit sed nunc at lorem.</a></li>
+            <li class="footer__list--item"><a class="footer__link" href="#">Vestibulum phasellus eu.</a></li>
+            <li class="footer__list--item"><a class="footer__link" href="#">Et ut diam aliquam.</a></li>
+            <li class="footer__list--item"><a class="footer__link" href="#">Pellentesque faucibus.</a></li>
+            <li class="footer__list--item"><a class="footer__link" href="#">Sit sed nunc at lorem.</a></li>
           </ul>
           <ul class="footer__list">
             <li class="footer__list--item footer__list--title">About us</li>
-            <li class="footer__list--item"><a class="footer__link" href="">Sit sed nunc at lorem.</a></li>
-            <li class="footer__list--item"><a class="footer__link" href="">Vestibulum phasellus eu.</a></li>
+            <li class="footer__list--item"><a class="footer__link" href="#">Sit sed nunc at lorem.</a></li>
+            <li class="footer__list--item"><a class="footer__link" href="#">Vestibulum phasellus eu.</a></li>
           </ul>
           <ul class="footer__list">
             <li class="footer__list--item footer__list--title">Support</li>
-            <li class="footer__list--item"><a class="footer__link" href="">Et ut diam aliquam.</a></li>
-            <li class="footer__list--item"><a class="footer__link" href="">Pellentesque faucibus.</a></li>
-            <li class="footer__list--item"><a class="footer__link" href="">Sit sed nunc at lorem.</a></li>
-            <li class="footer__list--item"><a class="footer__link" href="">Vestibulum phasellus eu.</a></li>
+            <li class="footer__list--item"><a class="footer__link" href="#">Et ut diam aliquam.</a></li>
+            <li class="footer__list--item"><a class="footer__link" href="#">Pellentesque faucibus.</a></li>
+            <li class="footer__list--item"><a class="footer__link" href="#">Sit sed nunc at lorem.</a></li>
+            <li class="footer__list--item"><a class="footer__link" href="#">Vestibulum phasellus eu.</a></li>
           </ul>
           <ul class="footer__list">
             <li class="footer__list--item footer__list--title">Contact</li>
@@ -196,16 +198,16 @@
         </section>
         <section class="footer__margin">
           <section class="footer__terms">
-            <p class="footer__terms--link"><a class="footer__link" href="">Terms</a></p>
-            <p class="footer__terms--link"><a class="footer__link" href="">Privacy policy</p></a>
+            <p class="footer__terms--link"><a class="footer__link" href="#">Terms</a></p>
+            <p class="footer__terms--link"><a class="footer__link" href="#">Privacy policy</p></a>
           </section>
           <section class="footer__brand">
             <p class="footer__paragraph">Medica © All rights reserved</p>
           </section>
           <section class="footer__socials">
-            <a class="footer__socials--link" href=""><img src="../assets/icons/tt-icon.svg" alt=""></a>
-            <a class="footer__socials--link" href=""><img src="../assets/icons/fb-icon.svg" alt=""></a>
-            <a class="footer__socials--link" href=""><img src="../assets/icons/in-icon.svg" alt=""></a>
+            <a class="footer__socials--link" href="#"><img src="../assets/icons/tt-icon.svg" alt="twitter icon"></a>
+            <a class="footer__socials--link" href="#"><img src="../assets/icons/fb-icon.svg" alt="facebook icon"></a>
+            <a class="footer__socials--link" href="#"><img src="../assets/icons/in-icon.svg" alt="linkedin icon"></a>
           </section>
         </section>
       </section>

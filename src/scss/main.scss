@@ -2,7 +2,11 @@
 @import "_variables";
 @import "checkbox.scss";
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Raleway:wght@400;700;800&display=swap');
+@import "~hamburgers/_sass\\hamburgers/hamburgers.scss";
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: $white;
@@ -96,10 +100,18 @@ body {
   color: $white;
   background-color: $green;
   text-decoration: none;
+  transition: .5s cubic-bezier(0.46, 0.34, 0, 1);
   @media (max-width: $mobile){
     font-size: $li;
     padding: 16px 70.5px;
     margin: 0 0 24px 0;
+  }
+  
+  &:hover{
+    background-color: $pink;
+    color: $text;
+    border: none;
+    
   }
   
   &__secondary{
@@ -195,6 +207,7 @@ body {
 
   &__content{
     background-color: $green;
+    z-index: -100;
   }
   &__items{
     display: flex;
@@ -210,6 +223,7 @@ body {
   &__link{
     text-decoration: none;
     color: $white;
+    z-index: 100;
   }
   &__list{
     margin: 0 64px 0 0;
@@ -223,6 +237,7 @@ body {
       margin-right: 12px;
     }
     &--item{
+      z-index: 100;
       color: $white;
       font-size: $li;
       margin-bottom: 16px;
@@ -376,6 +391,33 @@ body {
   }
 }
 
+.hamburger{
+  position: absolute;
+  right: 17px;
+  top: 9px;
+  @media (min-width: $medium){
+    display: none;
+  }
+  @media (max-width: $mobile){
+    right: 1px;
+    top: 9px;
+  }
+}
+
+.hamburger-inner::before{
+  background-color: $green;
+}
+.hamburger-inner::after{
+  background-color: $green;
+}
+.hamburger-inner{
+  background-color: $green;
+}
+
+.is-active.hamburger-inner::after{
+  background-color: $green;
+}
+
 .header{
   margin: 24px 8% 240px 8%;
   @media (max-width: $mobile){
@@ -472,6 +514,24 @@ body {
   }
  }
  &__item{
+  &::after{
+      content: '';
+      display: block;
+      position: relative;
+      top: -0px;
+      // left: -80px;
+      width: -webkit-fill-available;
+      height: 8px;
+      background-color: $pink;
+      z-index: -9;
+      opacity: 0;
+      transition: .4s cubic-bezier(0.55, 0.46, 0, 1);
+    }
+  &:hover::after{
+    opacity: 1;
+    transform: translateY(-8px);
+    // left: 0;
+  }
   color: $white;
   list-style: none;
   margin-left: 48px;
@@ -684,3 +744,18 @@ body {
   }
 }
 
+@keyframes nav-hover {
+  0%{
+    opacity: 0;
+    // left: -80px;
+    top: 0px;
+  }
+  33%{
+    opacity: .75;
+  }
+  100%{
+    opacity: 1;
+    top: -8px;
+    // left: 0;
+  }
+}

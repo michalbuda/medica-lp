@@ -6,4 +6,10 @@ import '../scss/main.scss';
 
 /* place your code below */
 
-console.log('HELLO 🚀')
+console.log('Hi there 👋');
+
+const hamburger = document.querySelector('.hamburger');
+
+hamburger.addEventListener('click', (e) =>{
+    hamburger.classList.toggle('is-active')
+})
